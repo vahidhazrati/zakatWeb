@@ -1,23 +1,22 @@
-import { Component, OnInit,ElementRef,ViewChild } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
-  selector: 'app-adduser',
-  templateUrl: './adduser.component.html',
-  styleUrls: ['./adduser.component.css']
+  selector: 'app-addngo',
+  templateUrl: './addngo.component.html',
+  styleUrls: ['./addngo.component.css']
 })
-export class AdduserComponent implements OnInit {
- // @ViewChild('fileInput') fileInput: ElementRef;
-  fileAttr = 'Choose File';
+export class AddngoComponent implements OnInit {
 
-  constructor() { 
-    
-  }
+  constructor(private rout:Router) { }
 
   ngOnInit(): void {
   }
- // @ViewChild('UploadFileInput') uploadFileInput: ElementRef;
+
   myfilename = 'Select user picture';
 
+  submit(){
+this.rout.navigate(['/ngo'],{});
+  }
 
   fileChangeEvent(fileInput: any) {
 

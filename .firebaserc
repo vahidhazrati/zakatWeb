@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "zakat-ui"
+  },
+  "targets": {
+    "zakat-ui": {
+      "hosting": {
+        "zakatWeb": [
+          "zakat-ui"
+        ]
+      }
+    }
   }
 }

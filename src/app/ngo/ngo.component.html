@@ -1,0 +1,63 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Tools</h4>
+                        <!-- <p class="card-category">Category subtitle</p> -->
+                    </div>
+                    <div class="card-body">
+                        <button (click)="addnew()" mat-raised-button class="btn btn-success">Add New</button>
+                        <!-- <button mat-raised-button class="btn btn-danger">Danger</button> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-warning">
+                        <h4 class="card-title">NGO's</h4>
+                        <p class="card-category">List of NGO's</p>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-hover">
+                            <thead class="text-invers">
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>Tell</th>
+                                <th>Description</th>
+                                <th></th>
+                                <!-- <th>Delete</th> -->
+                            </thead>
+                            <tbody *ngFor="let item of ngos">
+                                <tr>
+                                    <td>{{item.Id}}</td>
+                                    <td>{{item.Name}}</td>
+                                    <td>{{item.Email}}</td>
+                                    <td>{{item.Address}}</td>
+                                    <td>{{item.Tell1}}</td>
+                                    <td>{{item.Description}}</td>
+                                    <!-- <td class="text-success"><i class="material-icons">mode_edit</i></td>
+                                    <td class="text-danger"><i class="material-icons">delete</i></td> -->
+                                    <td class="td-actions text-right" style="width: 5%;">
+                                        <button class="btn btn-primary btn-link btn-sm btn-just-icon mat-raised-button" mat-raised-button="" mattooltip="Edit Task" type="button">
+                                        <span class="mat-button-wrapper"><i class="material-icons">edit</i></span>
+                                        <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                                        <div class="mat-button-focus-overlay"></div></button>
+                                        <button class="btn btn-danger btn-link btn-sm btn-just-icon mat-raised-button" mat-raised-button="" mattooltip="Remove" type="button"><span class="mat-button-wrapper"><i class="material-icons">close</i></span>
+                                        <div class="mat-button-ripple mat-ripple" matripple=""></div><div class="mat-button-focus-overlay"></div></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

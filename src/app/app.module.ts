@@ -10,11 +10,19 @@ import { AdduserComponent } from './adduser/adduser.component';
 import { MaterialModule } from './material/material.module';
 import { ComponentsModule } from './components/components.module';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NgoDashboardComponent } from './ngo-dashboard/ngo-dashboard.component';
+import { NgoComponent } from './ngo/ngo.component';
+import { AddngoComponent } from './addngo/addngo.component';
 @NgModule({
   declarations: [
     AppComponent,
     AdduserComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
+    NgoDashboardComponent,
+    NgoComponent,
+    AddngoComponent
   ],
   imports: [
     BrowserModule,

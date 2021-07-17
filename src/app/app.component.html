@@ -1,7 +1,17 @@
-<div class="wrapper">
-    <div class="sidebar" data-color="danger" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
+<div *ngIf="check">
+    <div style="margin-left: 31%;padding: 40px;margin-right: 0px;" class="row">
+        <div class="col-md-8">
+            <h1>Welcome to Insurance Portal</h1>
+            <h3 style="margin-left: 20px;">Please Login to access</h3>
+        </div>
+    </div>
+    <app-login (check)="submit($event)"></app-login>
+
+</div>
+<div *ngIf="!check" class="wrapper">
+    <div class="sidebar" (check)="submit($event)" data-color="azure" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
         <app-sidebar></app-sidebar>
-        <div class="sidebar-background" style="background-image: url(./assets/img/sidebar-4.jpg)"></div>
+        <!-- <div class="sidebar-background" style="background-image: url(./assets/img/sidebar-4.jpg)"></div> -->
     </div>
     <div class="main-panel">
         <app-navbar></app-navbar>
@@ -11,7 +21,7 @@
         </div>
     </div>
 </div>
-<!-- Buy-Modal-angular -->
+
 <div class="modal modal-angular fade" id="buy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

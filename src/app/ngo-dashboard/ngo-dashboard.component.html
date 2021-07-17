@@ -1,0 +1,54 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                        <div class="card-icon">
+                            <!-- <i style="text-align: left;" class="material-icons">info_outline</i> -->
+                            <h3 style="margin-bottom: 20px;">NGO Information</h3>
+                        </div>
+                        <!-- <p style="text-align: left !important;font-size: x-large;" class="card-category">{{user.Name}}</p> -->
+                        <!-- <h3 class="card-title">75</h3> -->
+                    </div>
+                    <div style="text-align: left !important;" class="card-body">
+                        <h4><strong>Name: </strong> {{user.Name}}</h4>
+                        <p> <strong>Email: </strong> {{user.Email}}</p>
+                        <p> <strong>Tell#1: </strong> {{user.Tell1}}</p>
+                        <p> <strong>Tell#2: </strong>{{user.Tell2}}</p>
+                        <p> <strong>Address: </strong> {{user.Address}}</p>
+                        <p> <strong>Description: </strong> {{user.Description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header card-header-success">
+            <h4 class="card-title">User List</h4>
+            <p class="card-category">Here is the list of this ngo users</p>
+        </div>
+        <div class="card-content table-responsive table-full-width">
+            <table class="table">
+                <thead class="text-invers">
+                    <th>Name</th>
+                    <th>Family</th>
+                    <th>Email</th>
+                    <th>IC</th>
+                    <th>Tell</th>
+                    <th>Edit</th>
+                </thead>
+                <tbody *ngFor="let item of emploees">
+                    <tr>
+                        <td>{{item.Name}}</td>
+                        <td>{{item.Family}}</td>
+                        <td>{{item.Email}}</td>
+                        <td>{{item.IC}}</td>
+                        <td>{{item.Tell1}}</td>
+                        <td class="text-success"><i class="material-icons">mode_edit</i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
